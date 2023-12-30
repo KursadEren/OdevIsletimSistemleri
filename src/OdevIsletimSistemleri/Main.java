@@ -6,8 +6,14 @@ public class Main {
     public static void main(String[] args) {
         BagliListe liste = new BagliListe();
         DosyadanOkuma dosyaOkuma = new DosyadanOkuma("C:\\Users\\keren\\eclipse-workspace\\OdevIsletimSistemleri\\src\\OdevIsletimSistemleri\\giris.txt");
-
+        denetleyici denetle= new denetleyici();
         dosyaOkuma.okuma(liste);
+        int sure=0;
+        Bellek bellek = new Bellek();
+        Yazici yazici = new Yazici();
+        Tarayici tarayici = new Tarayici();
+        Modem modem  = new Modem();
+        CD cd = new CD();
         
         BagliListe p0 = new BagliListe();
         BagliListe p1 = new BagliListe();
@@ -33,15 +39,17 @@ public class Main {
         	}
         }
        
-        int sure;
-        Bellek bellek = new Bellek();
         
-        while(true) {
+       
+        while(true) {//(p0.head.data,bellek,yazici,tarayici,modem,cd);
         	if(p0.head != null) {
+        		denetle.DenetlemeGercek(p0.head.data, bellek);
+        		
         		
         	}
         	
         	
+        	sure++;
         }
         
         

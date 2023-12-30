@@ -3,12 +3,12 @@ package OdevIsletimSistemleri;
 public class Bellek {
    int Bellek;
    int GercekBellek;
-   int SıralamaBellek;
+   int SiralamaBellek;
    
    public Bellek() {
    this.Bellek = 1024;
    this.GercekBellek = 64;
-   this.SıralamaBellek = Bellek - GercekBellek;
+   this.SiralamaBellek = Bellek - GercekBellek;
    }
    
    public void GercekBellekYetki(int sayi)
@@ -18,7 +18,7 @@ public class Bellek {
    
    public void SıralamaBellek(int sayi)
    {	
-	   this.SıralamaBellek = this.SıralamaBellek-sayi;
+	   this.SiralamaBellek = this.SiralamaBellek-sayi;
    }
 }
 
