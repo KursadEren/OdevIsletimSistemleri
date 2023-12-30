@@ -1,6 +1,7 @@
 package OdevIsletimSistemleri;
 
 public class Proses {
+	int pid;
 	int varisZamani;
 	int oncelik;
 	int prosesZamani;
@@ -9,8 +10,10 @@ public class Proses {
 	int TarayiciSayi;
 	int ModemSayi;
 	int CdSurucuSayi;
+	String durum;
+	int baslamaZaman;
 	
-	public Proses(int varisZamani,int oncelik,int prosesZamani,int MbAlan,int YaziciSayi,int TarayiciSayi,int ModemSayi,int CdSurucuSayi )
+	public Proses(int varisZamani,int oncelik,int prosesZamani,int MbAlan,int YaziciSayi,int TarayiciSayi,int ModemSayi,int CdSurucuSayi,String durum,int pid )
 	{
 		this.varisZamani =varisZamani;
 		this.oncelik=oncelik;
@@ -20,6 +23,9 @@ public class Proses {
 		this.TarayiciSayi=TarayiciSayi;
 		this.ModemSayi=ModemSayi;
 		this.CdSurucuSayi=CdSurucuSayi;
+		this.durum = durum;
+		this.pid = pid;
+		int baslamaZaman =0;
 	}
 	@Override
     public String toString() {
@@ -32,5 +38,13 @@ public class Proses {
                 ", Modem Sayısı: " + ModemSayi +
                 ", CD Sürücü Sayısı: " + CdSurucuSayi;
     }
-
+     
+	public void baslamaZamaniAta(int deger)
+	{
+		this.baslamaZaman = deger;
+	}
+	public void ProsesBasladi()
+	{
+		System.out.println(this.pid + " Çalışmaya basladi");
+	}
 }
