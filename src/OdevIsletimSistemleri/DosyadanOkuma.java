@@ -33,7 +33,7 @@ public class DosyadanOkuma {
                 int TarayiciSayi = Integer.parseInt(sayiStr[5].trim());
                 int ModemSayi = Integer.parseInt(sayiStr[6].trim());
                 int CdSurucuSayi = Integer.parseInt(sayiStr[7].trim());
-                
+               
                 Proses yeniProses = new Proses(varisZamani, oncelik, prosesZamani, MbAlan, YaziciSayi, TarayiciSayi, ModemSayi, CdSurucuSayi,"pasif",Count);
                 bagliListe.ekle(yeniProses);
             }

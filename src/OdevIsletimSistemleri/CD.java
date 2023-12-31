@@ -38,7 +38,10 @@ public class CD {
 	public boolean CD2Hazirmi() {
 		return this.CDHazir2;
 	}
-
+	public void iade() {
+		 this.CDHazir2=true;
+		 this.CDHazir1=true;
+	}
 }
 
 

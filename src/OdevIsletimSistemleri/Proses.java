@@ -50,4 +50,8 @@ public class Proses {
 	{
 		System.out.println(this.pid + " Çalışmaya basladi");
 	}
+	public void ProsesDurdu()
+	{
+		System.out.println(this.pid + " Çalışmayı Durdurdu");
+	}
 }
