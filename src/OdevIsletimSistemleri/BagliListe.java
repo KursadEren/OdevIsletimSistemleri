@@ -49,7 +49,11 @@ public class BagliListe {
             
         
     }
-    
+    public void removeHead() {
+        if (head != null) {
+            head = head.next;
+        }
+    }
     public void BasDugumSil(BagliListe liste) {
         if (head == null) {
             System.out.println("Liste boş, silme işlemi yapılamaz.");

@@ -12,6 +12,7 @@ public class Proses {
 	int CdSurucuSayi;
 	String durum;
 	int baslamaZaman;
+	int kackereCalisti;
 	
 	public Proses(int varisZamani,int oncelik,int prosesZamani,int MbAlan,int YaziciSayi,int TarayiciSayi,int ModemSayi,int CdSurucuSayi,String durum,int pid )
 	{
@@ -25,7 +26,9 @@ public class Proses {
 		this.CdSurucuSayi=CdSurucuSayi;
 		this.durum = durum;
 		this.pid = pid;
-		int baslamaZaman =0;
+		this.baslamaZaman =-1;
+		this.kackereCalisti=0;
+		
 	}
 	@Override
     public String toString() {
