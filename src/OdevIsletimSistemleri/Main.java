@@ -14,7 +14,7 @@ public class Main {
         Tarayici tarayici = new Tarayici();
         Modem modem = new Modem();
         CD cd = new CD();
-
+        boolean CalisanProses = false;
         BagliListe p0 = new BagliListe();
         BagliListe p1 = new BagliListe();
         BagliListe p2 = new BagliListe();
@@ -40,15 +40,16 @@ public class Main {
             if (p0.head.data != null) {
                 if (p0.head.data.varisZamani <= count) {
                 	
-                	
+                	if(p0.head.data.baslamaZaman != 0)
                     if (denetle.DenetlemeSirali(p0.head.data, bellek, yazici, modem, tarayici, cd)) {
                         p0.head.data.durum = "Aktif";
                         p0.head.data.baslamaZamaniAta(count);
                         p0.head.data.varisZamani--;
                         p0.head.data.ProsesBasladi();
                         p0.head.data.kackereCalisti++;
-               
-                    } else {
+                        CalisanProses = true;
+                    } 
+                    else {
                         if (p0.head.data.durum == "Askıda") {
                             yazici.iade();
                             tarayici.iade();
@@ -56,7 +57,8 @@ public class Main {
                             bellek.iade();
                             p0.Headyazdir();
                             System.out.println("Askıya Alındı");
-                        } else {
+                        } 
+                        else {
                             yazici.iade();
                             tarayici.iade();
                             modem.iade();
@@ -145,8 +147,10 @@ public class Main {
                              p2.Headyazdir();
                              System.out.println("Askıya Alındı");
                     	}
-                    } else {
-                        if (p2.head.data.durum == "Askıda") {
+                    } 
+                    else {
+                        
+                    	if (p2.head.data.durum == "Askıda") {
                             yazici.iade();
                             tarayici.iade();
                             modem.iade();
